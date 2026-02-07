@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { FaRocket } from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn, FaRocket, FaTwitter } from "react-icons/fa";
 import background from '../assets/imagesuse/aboutbg.jpg';
 import Seo from "../components/seo/Seo";
 import EnquiryModal from '../components/Enquiry';
 import Tech from '../assets/imagesuse/tech.jpg'
 import vision from '../assets/imagesuse/vision.jpg'
 import fun from '../assets/imagesuse/fun.jpg'
+import { FaLinkedin } from "react-icons/fa6";
 export default function AboutUs() {
   const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
 
@@ -17,10 +18,10 @@ export default function AboutUs() {
   }, []);
 
   const seoData = {
-    title: "About Zentrix Media | Your External Growth Engine",
+    title: "About Stravix Media | Your External Growth Engine",
     description: "We are digital natives, data geeks, and creative rebels building sustainable growth for brands in a fast-changing digital world.",
-    keywords: ["about zentrix media", "digital marketing agency", "performance marketing", "creative strategy", "data-driven marketing"],
-    href: "https://zentrix.media/about-us",
+    keywords: ["about Stravix media", "digital marketing agency", "performance marketing", "creative strategy", "data-driven marketing"],
+    href: "https://Stravix.media/about-us",
   };
 
   const differentiators = [
@@ -44,6 +45,41 @@ export default function AboutUs() {
     },
   ];
 
+  const founders = [
+  {
+    name: "Omkar",
+    role: "Visionary Leader",
+    desc: "Passion for scaling brands through innovative digital strategies. Sees 3 years ahead when others see quarters.",
+    image: "https://via.placeholder.com/400x400/1a1a1a/ffffff?text=Omkar", // ← replace with real image
+    social: {
+      linkedin: "#",
+      twitter: "#",
+      instagram: "#",
+    },
+  },
+  {
+    name: "Harry",
+    role: "Creative Powerhouse",
+    desc: "Crafts viral campaigns that blend culture, emotion, and sharp storytelling. Lives for the moment the idea clicks.",
+    image: "https://via.placeholder.com/400x400/1a1a1a/ffffff?text=Harry",
+    social: {
+      linkedin: "#",
+      twitter: "#",
+      instagram: "#",
+    },
+  },
+  {
+    name: "Hermione",
+    role: "Data Science Expert",
+    desc: "Turns chaotic data into crystal-clear growth paths. Obsessed with ROI you can actually see on the bank statement.",
+    image: "https://via.placeholder.com/400x400/1a1a1a/ffffff?text=Hermione",
+    social: {
+      linkedin: "#",
+      twitter: "#",
+      instagram: "#",
+    },
+  },
+];
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -57,21 +93,28 @@ export default function AboutUs() {
     
     <div className="font-sans bg-white">
         <link rel="preload" href={background} as="image" />
-      <Seo title={seoData.title} description={seoData.description} keywords={seoData.keywords} href={seoData.href} />
+      <Seo
+       title={seoData.title}
+        description={seoData.description}
+         keywords={seoData.keywords} 
+         canonicalUrl={seoData.href}
+         ogImage={background}
+  author="Stravix Media"
+          />
 
       {/* Hero Header */}
       <header
-        className="relative text-center py-20 md:py-32 px-4 md:px-8 bg-cover bg-no-repeat bg-center overflow-hidden"
+        className="relative text-center py-20 md:py-32 px-4 md:px-8 bg-cover bg-no-repeat bg-center overflow-hidden bg-black"
         style={{ backgroundImage: `url(${background})` ,
        loading: "lazy"}}
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative max-w-6xl mx-auto">
-           <h1 className="text-4xl md:text-5xl  font-semibold mb-6 text-white leading-tight animate-fade-in-up">
-            About Zentrix Media
-          </h1>
+           <h2 className="text-4xl   font-semibold mb-6 text-white leading-tight animate-fade-in-up">
+            Young Enough to Innovate. Experienced Enough to Deliver.
+          </h2>
            <p className="text-xl  text-white/80 mb-8 max-w-4xl mx-auto animate-fade-in-up animation-delay-300">
-            We are the bridge between "Viral Creativity" and "Business Logic."
+         
           </p>
         </div>
       </header>
@@ -83,24 +126,20 @@ export default function AboutUs() {
             <div className="rounded-3xl overflow-hidden shadow-2xl order-1 lg:order-2">
               <img
                 src="https://images.pexels.com/photos/6913338/pexels-photo-6913338.jpeg"
-                alt="Zentrix Media team brainstorming"
-                className="w-full h-auto md:h-[400px] object-cover hover:scale-105 transition-transform duration-1000"
+                alt="Stravix Media team brainstorming"
+                className="w-full h-auto md:h-[300px] object-cover hover:scale-105 transition-transform duration-1000"
               />
             </div>
             <div className="space-y-8 order-2 lg:order-1">
-              <h1 className="text-4xl   font-semibold mb-6 text-gray-900 leading-tight animate-fade-in-up">
-                What we do?
-              </h1>
+              <h4 className="font-inter font-bold text-[30px] md:text-[34.3px] leading-[45px]  tracking-normal  mb-3 text-gray-900 animate-fade-in-up">
+                Who We Are?
+              </h4>
                <p className="text-xl  text-gray-800 mb-4 max-w-4xl mx-auto animate-fade-in-up animation-delay-300">
-               The modern digital landscape is quite dynamic and the brand’s needs are constantly evolving. One day it's SEO, the next it's AI Search and you need a guide who can pivot instantly.
+              Stravix.Media was born out of a rebellion against boring, cookie-cutter marketing. We saw
+agencies rinsing and repeating the same strategies for every client. We decided to change that.
+We are a collective of strategists, artists, data nerds, and storytellers.
               </p>
-            <p className="text-xl  text-gray-800 mb-4 max-w-4xl mx-auto animate-fade-in-up animation-delay-300">
-                At Zentrix Media, we are versatile by design and more than happy to partner with you and help you accomplish your goals. We don't just "do digital marketing" but we act as your external growth engine. Whether you are a startup looking for your first 10,000 users or a legacy brand needing a digital facelift, we have the tools, the data, and the energy and the right mettle to make it happen.
-              </p>
-              <p className="text-xl  text-gray-800 mb-4 max-w-4xl mx-auto animate-fade-in-up animation-delay-300">
-                We are a team of digital natives, data geeks, and creative rebels on a mission to rewrite the rules of modern marketing.
-              </p>
-             
+           
             </div>
           </div>
         </div>
@@ -115,23 +154,22 @@ export default function AboutUs() {
             <div className="rounded-3xl overflow-hidden shadow-2xl ">
               <img
                 src="https://www.shutterstock.com/image-photo/professionals-diverse-group-collaborate-boardroom-600nw-2431976515.jpg"
-                alt="Zentrix founders and team"
-                className="w-full h-auto md:h-[400px] object-cover hover:scale-105 transition-transform duration-1000"
+                alt="Stravix founders and team"
+                className="w-full h-auto md:h-[300px] object-cover hover:scale-105 transition-transform duration-1000"
               />
             </div>
             <div className="space-y-5 ">
-             <h1 className="text-4xl   font-semibold mb-6 text-gray-900 leading-tight animate-fade-in-up">
-                The Founder’s Story
-              </h1>
+             <h4 className="font-inter font-bold text-[30px] md:text-[34.3px] leading-[45px]  tracking-normal  mb-3 text-gray-900 animate-fade-in-up">
+               Our Journey & Expertise
+              </h4>
               <p className="text-xl  text-gray-800 mb-4 max-w-4xl mx-auto animate-fade-in-up animation-delay-300">
-                We didn't start Zentrix Media to be another agency with a foosball table and vague promises. We started it because we saw a gap. The digital landscape was changing faster than traditional agencies could keep up.
+               
+Over the years, we have weathered every digital storm—from the death of organic reach to the
+rise of short-form video. Our team carries a wealth of experience, having managed millions in
+ad spend and built brands from scratch. We don&#39;t guess; we know what works because we’ve
+been in the trenches.
               </p>
-               <p className="text-xl  text-gray-800 mb-4 max-w-4xl mx-auto animate-fade-in-up animation-delay-300">
-                AI was rising. Attention spans were shrinking. Data was everywhere, but nobody knew how to read it. So, we built Zentrix Media — a collective of young, dynamic professionals who grew up on the internet.
-              </p>
-              <p className="text-xl  text-gray-800 mb-4 max-w-4xl mx-auto animate-fade-in-up animation-delay-300">
-                We understand the memes, the algorithms, and the culture because we live in it. But we back that intuition with hardcore data science and deliver results every single time.
-              </p>
+               
             </div>
           </div>
         </div>
@@ -140,35 +178,107 @@ export default function AboutUs() {
             {/* Meet the Founders */}
       <section className="relative overflow-hidden py-13" style={{ background: 'linear-gradient(180deg, #111488 0%, #0d1066 100%)' }}>
         <div className="absolute inset-0 bg-white/10"></div>
-        <div className="relative max-w-6xl mx-auto px-4 md:px-8 text-center space-y-12">
-          <div>
-            <h1 className="text-4xl mb-2 text-white  animate-fade-in-up heading">Meet the Founders</h1>
-             <h2 className="text-xl  font-medium mb-2 text-white/80 leading-tight animate-fade-in-up">Young Blood. Old Souls. Sharp Minds.</h2>
+
+  <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-12 md:mb-16">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+        Meet the Founders
+      </h2>
+      <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
+        Young Blood. Old Souls. Sharp Minds.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
+      {founders.map((founder, index) => (
+        <div
+          key={index}
+          className="group flex flex-col items-center text-center"
+        >
+          {/* Circular avatar */}
+          <div className="relative mb-6">
+            <div className="w-44 h-44 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-white shadow-lg transition-transform duration-300 group-hover:scale-105">
+              <img
+                src={founder.image}
+                alt={founder.name}
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Optional subtle ring on hover */}
+            <div className="absolute inset-0 rounded-full border-4 border-[#F16D34] opacity-0 group-hover:opacity-30 transition-opacity duration-300 pointer-events-none" />
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3  gap-10">
-            <div className="space-y-4 group">
-              <div className="rounded-full md:rounded-xl lg:rounded-full overflow-hidden shadow-2xl mx-auto w-72 h-72 md:w-100 md:h-80 lg:w-72 lg:h-72 ">
-                <img src="https://media.gettyimages.com/id/1369199360/photo/portrait-of-a-handsome-young-businessman-working-in-office.jpg?s=612x612&w=0&k=20&c=ujyGdu8jKI2UB5515XZA33Tt4DBhDU19dKSTUTMZvrg="
-                 alt="Omkar" className="w-full h-full object-left group-hover:scale-110 transition-transform duration-500" />
-              </div>
-               <h2 className="text-xl  font-medium mb-2 text-white leading-tight animate-fade-in-up">Omkar</h2>
-             <p className="text-xl  text-white/80 mb-4 max-w-4xl mx-auto animate-fade-in-up animation-delay-300">Visionary leader with a passion for scaling brands through innovative digital strategies.</p>
+
+          {/* Name & Role */}
+          <h3 className="text-2xl font-bold text-white mb-1">{founder.name}</h3>
+          <p className="text-[#F16D34] font-medium text-lg mb-4">{founder.role}</p>
+
+          {/* Description */}
+          <p className="text-white/80 leading-relaxed max-w-xs mx-auto mb-6">
+            {founder.desc}
+          </p>
+
+          {/* Social icons */}
+          <div className="flex gap-5">
+            {founder.social.linkedin && (
+              <a
+                href={founder.social.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-[#F16D34] transition-colors"
+              >
+                <FaLinkedinIn size={22} />
+              </a>
+            )}
+            {founder.social.twitter && (
+              <a
+                href={founder.social.twitter}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-[#F16D34] transition-colors"
+              >
+                <FaTwitter size={22} />
+              </a>
+            )}
+            {founder.social.instagram && (
+              <a
+                href={founder.social.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-[#F16D34] transition-colors"
+              >
+                <FaInstagram size={22} />
+              </a>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+      </section>
+
+            {/* Founder’s Story – Mobile: Image first, then text */}
+      <section className="py-20 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="rounded-3xl overflow-hidden shadow-2xl ">
+              <img
+                src="https://www.shutterstock.com/image-photo/professionals-diverse-group-collaborate-boardroom-600nw-2431976515.jpg"
+                alt="Stravix founders and team"
+                className="w-full h-auto md:h-[300px] object-cover hover:scale-105 transition-transform duration-1000"
+              />
             </div>
-            <div className="space-y-4 group">
-              <div className="rounded-full md:rounded-xl lg:rounded-full overflow-hidden shadow-2xl mx-auto w-72 h-72 md:w-100 md:h-80 lg:w-72 lg:h-72 ">
-                <img src="https://media.gettyimages.com/id/1338145486/photo/businessman-working-on-a-laptop-computer-in-the-office.jpg?s=612x612&w=0&k=20&c=CNvAyzWFbYLzZsRHRxNbs8o-Sb8va1ullAJdm-JLPp0="
-                alt="Co-founder" className="w-full h-full object-center group-hover:scale-110 transition-transform duration-500" />
-              </div>
-              <h2 className="text-xl  font-medium mb-2 text-white leading-tight animate-fade-in-up"> Harry</h2>
-             <p className="text-xl  text-white/80 mb-4 max-w-4xl mx-auto animate-fade-in-up animation-delay-300">Creative powerhouse crafting viral campaigns that blend culture and storytelling.</p>
-            </div>
-            <div className="space-y-4 group">
-              <div className="rounded-full md:rounded-xl lg:rounded-full overflow-hidden shadow-2xl mx-auto w-72 h-72 md:w-100 md:h-80 lg:w-72 lg:h-72 ">
-                <img src="https://media.gettyimages.com/id/1456194324/photo/confident-businesswoman-in-modern-office.jpg?s=612x612&w=0&k=20&c=az0Bfz3H9lFHDCzidKi6o1D_N07aTORXDlpyE0zuHaw="
-                alt="Co-founder" className="w-full h-full object-left group-hover:scale-110 transition-transform duration-500" />
-              </div>
-              <h2 className="text-xl  font-medium mb-2 text-white leading-tight animate-fade-in-up">Hermione</h2>
-            <p className="text-xl  text-white/80 mb-4 max-w-4xl mx-auto animate-fade-in-up animation-delay-300">Data science expert turning insights into measurable ROI.</p>
+            <div className="space-y-5 ">
+             <h4 className="font-inter font-bold text-[30px] md:text-[34.3px] leading-[45px]  tracking-normal  mb-3 text-gray-900 animate-fade-in-up">
+             Our Culture
+              </h4>
+              <p className="text-xl  text-gray-800 mb-4 max-w-4xl mx-auto animate-fade-in-up animation-delay-300">
+We are vibrant, loud, and passionate. We celebrate failures as learning curves and win as team
+milestones. When you work with Stravix.Media, you don’t get a vendor; you get a partner who
+loses sleep over your KPIs so you don’t have to.
+              </p>
+               
             </div>
           </div>
         </div>
@@ -176,25 +286,25 @@ export default function AboutUs() {
 
 
 
-{/* Updated "What Makes Us Different?" Section */}
+{/* Updated "What Makes Us Different?" Section 
       <section className="py-15 bg-blue-900/10">
         <div className="max-w-7xl mx-auto px-6">
-            <h1 className="text-4xl   font-semibold mb-15 text-gray-900 leading-tight animate-fade-in-up text-center">
+            <h1 className="font-inter font-bold text-[30px] md:text-[34.3px] leading-[45px] text-center tracking-normal  mb-6 text-gray-900 animate-fade-in-up">
             What Makes Us Different?
           </h1>
 
-          {/* Large screens (md+): Horizontal 3-column grid */}
+          {/* Large screens (md+): Horizontal 3-column grid 
           <div className="hidden md:grid md:grid-cols-3 gap-8">
             {differentiators.map((item, index) => (
               <div
                 key={index}
                 className={`group relative overflow-hidden rounded-3xl  shadow-xl transition-all duration-500 bg-white hover:scale-105 hover:shadow-2xl ${
             index === activeIndex
-              ? "ring-2 ring-pink-600 ring-offset-2 "
+              ? "ring-2 ring-[#F16D34] ring-offset-2 "
               : " hover:shadow-2xl"
           }`}
               >
-                {/* Full height image on top */}
+                {/* Full height image on top 
                 <div className="overflow-hidden h-50">
                   <img
                     src={item.img}
@@ -203,11 +313,11 @@ export default function AboutUs() {
                   />
                 </div>
 
-                {/* Content below image */}
+                {/* Content below image 
                  <div className="px-4 py-2 text-left space-y-2">
             <h3
               className={`  transition-colors duration-300 text-xl  font-medium mb-2  leading-tight animate-fade-in-up ${
-                index === activeIndex ? "text-pink-600" : "text-gray-800 group-hover:text-pink-600"
+                index === activeIndex ? "text-[#F16D34]" : "text-gray-800 group-hover:text-[#F16D34]"
               }`}
             >
               {item.title}
@@ -222,19 +332,19 @@ export default function AboutUs() {
             ))}
           </div>
 
-             {/* Indicator dots for large screens (same as original) */}
+             {/* Indicator dots for large screens (same as original)
     <div className="hidden md:flex justify-center mt-10 gap-4">
       {differentiators.map((_, index) => (
         <div
           key={index}
           className={`h-2 rounded-full transition-all duration-500 ${
-            index === activeIndex ? "w-12 bg-pink-600" : "w-2 bg-gray-300"
+            index === activeIndex ? "w-12 bg-[#F16D34]" : "w-2 bg-gray-300"
           }`}
         />
       ))}
     </div>
 
-          {/* Small screens (<md): Full-width horizontal carousel (one card at a time) */}
+          {/* Small screens (<md): Full-width horizontal carousel (one card at a time)
           <div className="md:hidden relative">
             <div className="overflow-hidden">
               <div
@@ -244,7 +354,7 @@ export default function AboutUs() {
                 {differentiators.map((item, index) => (
                   <div key={index} className="w-full flex-shrink-0 px-4">
                     <div className="group relative overflow-hidden rounded-3xl shadow-xl bg-white">
-                      {/* Full height image on top */}
+                      {/* Full height image on top 
                       <div className="overflow-hidden h-50">
                         <img
                           src={item.img}
@@ -253,7 +363,7 @@ export default function AboutUs() {
                         />
                       </div>
 
-                      {/* Content below image */}
+                      {/* Content below image 
                       <div className="p-4 text-left space-y-2">
                         <h3 className="text-xl  font-medium mb-2 text-gray-800 leading-tight animate-fade-in-up">
                           {item.title}
@@ -268,14 +378,14 @@ export default function AboutUs() {
               </div>
             </div>
 
-            {/* Carousel indicators */}
+            {/* Carousel indicators
             <div className="flex justify-center mt-8 gap-4">
               {differentiators.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setActiveIndex(index)}
                   className={`h-2 rounded-full transition-all duration-500 ${
-                    index === activeIndex ? "w-12 bg-pink-600" : "w-2 bg-gray-300"
+                    index === activeIndex ? "w-12 bg-[#F16D34]" : "w-2 bg-gray-300"
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />
@@ -285,19 +395,19 @@ export default function AboutUs() {
            
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Final CTA */}
-      <section className="pt-20 pb-2 text-center bg-gray-900">
-          <h1 className="text-4xl   font-semibold mb-6 text-white leading-tight animate-fade-in-up">
+      <section className="pt-20 pb-2 text-center bg-[#2D2D2D]">
+          <h6 className="text-4xl   font-semibold mb-6 text-white leading-tight animate-fade-in-up">
           Enough about us.<br className="sm:hidden  " /> Let’s talk about you.
-        </h1>
+        </h6>
         <p className="text-lg sm:text-xl text-white/80 max-w-3xl mx-auto font-semibold mb-10">
           Ready to turn creativity into measurable growth?
         </p>
         <button
           onClick={openEnquiry}
-          className="inline-flex items-center px-8 py-4 bg-pink-600 text-white font-bold text-lg rounded-full hover:bg-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg animate-pulse-slow"
+          className="inline-flex items-center px-8 py-4 bg-[#F16D34] text-white font-bold text-lg rounded-full hover:bg-[#F16D34]/90 transition-all duration-300 transform hover:scale-105 shadow-lg animate-pulse-slow"
         >
           Get in Touch <FaRocket className="ml-2" />
         </button>

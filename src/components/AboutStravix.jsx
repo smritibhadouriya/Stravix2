@@ -49,7 +49,7 @@ export default function WhyDifferent() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-16 ">
-           <h1 className="font-inter font-bold text-[30px] md:text-[34.3px] leading-[45px]  tracking-normal text-center mb-3 text-gray-900 animate-fade-in-up">
+          <h1 className="text-4xl   font-semibold mb-3 text-gray-900 leading-tight animate-fade-in-up">
             Why We’re Different
           </h1>
           <p className="text-xl  font-medium mb-2 text-gray-800 leading-tight animate-fade-in-up">

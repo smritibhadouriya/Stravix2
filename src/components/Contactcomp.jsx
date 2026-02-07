@@ -1,5 +1,5 @@
 import React from 'react';
-import connect from '../assets/imagesuse/connectus.jpg'; // Fixed potential path typo: assuming 'imagesuse' was 'images'
+import connect from '../assets/Images/connect.webp'; // Fixed potential path typo: assuming 'imagesuse' was 'images'
 
 const Contactcomp = () => {
   return (
@@ -18,7 +18,7 @@ const Contactcomp = () => {
         </div>
         {/* Right - Form */}
         <div className="flex">
-          <div className="w-full h-full bg-white px-10 py-5 flex flex-col justify-center"> {/* Removed min-h-[520px]; height now responsive to content */}
+          <div className="w-full h-full bg-white px-10 py-5  lg:pt-5 lg:pb-10 lg:py-0 flex flex-col justify-center"> {/* Removed min-h-[520px]; height now responsive to content */}
             <p className="text-xl  font-medium my-4 text-gray-700 leading-tight animate-fade-in-up">
               Tell us about your brand and goals. We’ll get back to you within 24 hours.
             </p>
@@ -46,16 +46,11 @@ const Contactcomp = () => {
                 required
               >
                 <option value="" disabled>Select a service</option>
-                <option>Display Advertising</option>
-                <option>Influencer Marketing</option>
-                <option>Mobile Marketing</option>
-                <option>Email Marketing</option>
-                <option>Video Advertising</option>
-                <option>ORM Solutions</option>
-                <option>SEO Optimization</option>
-                <option>Social Media Marketing</option>
-                <option>Content Marketing</option>
-                <option>Other</option>
+                <option>Branding</option>
+                <option>Creative</option>
+                <option>Performance</option>
+                <option>Social & PR</option>
+               
               </select>
               <textarea
                 rows="4"
@@ -64,7 +59,7 @@ const Contactcomp = () => {
               />
               <button
                 type="submit"
-                className="w-full bg-blue-700 text-white py-4 rounded-full hover:bg-gradient-to-r hover:from-blue-800 hover:to-pink-700 transition shadow-lg" // Fixed hover classes to work with gradient
+                className="w-full bg-[#F16D34] text-white py-4 rounded-full hover:bg-[#F16D34]/90 transition shadow-lg" // Fixed hover classes to work with gradient
               >
                 Send Message
               </button>

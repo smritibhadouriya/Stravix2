@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { FaPaperPlane, FaEnvelope, FaMapMarkerAlt, FaInstagram, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Seo from "../components/seo/Seo";
 import { FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import BackgroundImage from "../assets/imagesuse/connectusbg.jpg";
+import SEO from "../components/seo/Seo";
 
 const Contact = () => {
   useEffect(() => {
@@ -12,15 +12,19 @@ const Contact = () => {
 
   return (
     <div className="w-full text-gray-900 bg-blue-900/10">
-      <Seo
-        title="Contact Zentrix | Strategy-First Digital Marketing Agency"
-        description="Ready to scale? Talk strategy with Zentrix. No fluff. No sales scripts. Just clarity, growth, and execution."
-        href="https://zentrix.media/contact"
-      />
+     
+          <SEO
+       title="Contact Stravix | Strategy-First Digital Marketing Agency"
+        description="Ready to scale? Talk strategy with Stravix. No fluff. No sales scripts. Just clarity, growth, and execution."
+         keywords="digital marketing blog, case studies, marketing insights"
+         canonicalUrl="https://Stravix.media/blog"
+         ogImage={BackgroundImage}
+  author="Stravix Media"
+          />
 
       {/* HERO */}
       <section 
-        className="relative w-full bg-cover bg-no-repeat bg-center  overflow-hidden"
+        className="relative w-full bg-cover bg-no-repeat bg-center  overflow-hidden bg-black"
         style={{
           backgroundImage: `url('${BackgroundImage}')`,
            loading: "lazy"
@@ -45,7 +49,7 @@ const Contact = () => {
 
           {/* LEFT */}
                <div className="">
-            <h1 className="text-4xl   font-semibold mb-4 text-gray-900 leading-tight animate-fade-in-up">
+             <h1 className="font-inter font-bold text-[30px] md:text-[34.3px] leading-[45px]  tracking-normal  mb-3 text-gray-900 animate-fade-in-up">
               Start with a Conversation.
             </h1>
            <p className="text-xl  text-gray-800 mb-6 max-w-4xl mx-auto animate-fade-in-up animation-delay-300">
@@ -62,10 +66,10 @@ const Contact = () => {
                 <div>
                   <p className="text-lg  font-medium  text-gray-800 leading-tight animate-fade-in-up">Email</p>
                   <a
-                    href="mailto:business@zentrix.media"
+                    href="mailto:business@Stravix.media"
                     className="text-gray-600 hover:text-blue-900 transition"
                   >
-                    business@zentrix.media
+                  marketing@stravix.media
                   </a>
                 </div>
               </div>
@@ -76,7 +80,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-lg  font-medium  text-gray-800 leading-tight animate-fade-in-up">Location</p>
-                  <p className="text-gray-600">Mumbai, India</p>
+                  <p className="text-gray-600">Dubai,UAE</p>
                 </div>
               </div>
             </div>
@@ -86,7 +90,7 @@ const Contact = () => {
                <p className="text-xl  font-medium  text-gray-800 leading-tight animate-fade-in-up mb-7">Connect with us</p>
               <div className="flex gap-6">
                 <a
-                  href="https://instagram.com/zentrixmedia"
+                  href="https://instagram.com/Stravixmedia"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-2xl text-gray-700 hover:text-pink-600 transition transform hover:scale-110"
@@ -95,7 +99,7 @@ const Contact = () => {
                   <FaInstagram />
                 </a>
                 <a
-                  href="https://linkedin.com/company/zentrixmedia"
+                  href="https://linkedin.com/company/Stravixmedia"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-2xl text-gray-700 hover:text-blue-700 transition transform hover:scale-110"
@@ -104,7 +108,7 @@ const Contact = () => {
                   <FaLinkedinIn />
                 </a>
                 <a
-                  href="https://x.com/zentrixmedia"
+                  href="https://x.com/Stravixmedia"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-2xl text-gray-700 hover:text-black transition transform hover:scale-110"
@@ -134,21 +138,14 @@ const Contact = () => {
               />
 
               <select className="w-full border border-gray-300 rounded-md p-3 text-gray-600">
-                <option>Select a service</option>
-                <option>SEO & Growth Strategy</option>
-                <option>Paid Media</option>
-                <option>Social Media</option>
-                <option>Content & Branding</option>
-                <option>Other</option>
+                 <option value="">Select a service</option>
+                <option>Branding</option>
+                <option>Creative</option>
+                <option>Performance</option>
+                <option>Social & PR</option>
               </select>
 
-              <select className="w-full border border-gray-300 rounded-md p-3 text-gray-600">
-                <option>Estimated budget</option>
-                <option>Under $5,000 / month</option>
-                <option>$5,000 – $10,000</option>
-                <option>$10,000 – $25,000</option>
-                <option>$25,000+</option>
-              </select>
+             
 
               <textarea
                 rows="4"
@@ -197,7 +194,7 @@ const Contact = () => {
     
           className=" border border-gray-200"
          
-          title="Zentrix Location"
+          title="Stravix Location"
            referrerpolicy="no-referrer-when-downgrade"
            ></iframe>
       </section>

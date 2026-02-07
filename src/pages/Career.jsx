@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaRocket, FaUsers, FaBrain, FaChartLine } from "react-icons/fa";
 import background from '../assets/imagesuse/career.jpg';
-import Seo from "../components/seo/Seo";
 import EnquiryModal from '../components/Enquiry';
 import gpt from '../assets/imagesuse/gpt.jpg';
 import party from '../assets/imagesuse/party.jpg';
@@ -10,6 +9,7 @@ import careerup from '../assets/imagesuse/careerup.jpg';
 import hybrid from '../assets/imagesuse/hybrid.jpg';
 import {openPositions} from '../Data/Openpositions.js';
 import { useNavigate } from "react-router-dom";
+import SEO from "../components/seo/Seo";
 
 
 export default function Careers() {
@@ -73,10 +73,10 @@ export default function Careers() {
   ];
 
   const seoData = {
-    title: "Careers at Zentrix Media | Join the Intelligence Revolution",
-    description: "Join Zentrix Media. Work with AI, data, and creativity. Zero ego. High velocity. Real impact.",
-    keywords: ["careers at zentrix media", "digital marketing jobs", "performance marketing careers", "creative agency jobs"],
-    href: "https://zentrix.media/career",
+    title: "Careers at Stravix Media | Join the Intelligence Revolution",
+    description: "Join Stravix Media. Work with AI, data, and creativity. Zero ego. High velocity. Real impact.",
+    keywords: ["careers at Stravix media", "digital marketing jobs", "performance marketing careers", "creative agency jobs"],
+    href: "https://Stravix.media/career",
   };
 
   const cultureItems = [
@@ -93,11 +93,19 @@ const navigate = useNavigate();
   return (
     <div className="font-sans bg-white">
         <link rel="preload" href={background} as="image" />
-      <Seo title={seoData.title} description={seoData.description} keywords={seoData.keywords} href={seoData.href} />
+     
+          <SEO
+       title="Careers at Stravix Media | Join the Intelligence Revolution"
+        description="Explore our blog for the latest digital marketing insights, case studies, and industry trends."
+         keywords="digital marketing blog, case studies, marketing insights"
+         canonicalUrl="https://Stravix.media/career"
+         ogImage={background}
+  author="Stravix Media"
+          />
 
       {/* Hero Header */}
       <header
-        className="relative text-center py-20 md:py-32 px-4 md:px-8 bg-cover bg-no-repeat overflow-hidden"
+        className="relative text-center py-20 md:py-32 px-4 md:px-8 bg-cover bg-no-repeat overflow-hidden bg-black"
         style={{ backgroundImage: `url(${background})` ,
        loading: "lazy"}}
 
@@ -114,7 +122,7 @@ const navigate = useNavigate();
           <Link
             to="/career"
             state={{ scrollToPositions: true }}
-            className="inline-flex items-center px-8 py-4 bg-pink-600 text-white font-bold text-lg rounded-full hover:bg-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg animate-pulse-slow"
+            className="inline-flex items-center px-8 py-4 bg-[#F16D34] text-white font-bold text-lg rounded-full hover:bg-[#F16D34]/90 transition-all duration-300 transform hover:scale-105 shadow-lg animate-pulse-slow"
           >
             Look Available Positions <FaRocket className="ml-2" />
           </Link>
@@ -127,16 +135,16 @@ const navigate = useNavigate();
           <div className="rounded-3xl overflow-hidden shadow-2xl  order-1">
             <img
               src="https://gorevity.com/wp-content/uploads/2025/08/A-team-working-at-a-table-with-laptops-charts-and-digital-icons-representing-AI-and-data-analysis.jpg"
-              alt="Zentrix Media team collaborating on intelligent marketing strategies with AI"
+              alt="Stravix Media team collaborating on intelligent marketing strategies with AI"
               className="w-full h-[300px] md:h-[400px] object-cover hover:scale-105 transition-transform duration-1000"
             />
           </div>
           <div className="space-y-8 order-2">
-            <h1 className="text-4xl  font-semibold mb-4 text-gray-900 leading-tight animate-fade-in-up">
+             <h1 className="font-inter font-bold text-[30px] md:text-[34.3px] leading-[45px]  tracking-normal  mb-3 text-gray-900 animate-fade-in-up">
               Work Smarter, Not Harder
             </h1>
            <p className="text-xl  text-gray-800 mb-4 max-w-4xl mx-auto animate-fade-in-up animation-delay-300">
-              At most agencies, you spend 50% of your time on busy work. At Zentrix Media, we don’t want you to do the boring stuff—reporting, scheduling, basic code.
+              At most agencies, you spend 50% of your time on busy work. At Stravix Media, we don’t want you to do the boring stuff—reporting, scheduling, basic code.
             </p>
            <p className="text-xl  text-gray-800 mb-4 max-w-4xl mx-auto animate-fade-in-up animation-delay-300">
               We encourage automation for all the run-of-the-mill tasks so you can spend 100% of your brainpower on Strategy, Creativity, and Innovation and do things that help you grow personally and professionally.
@@ -152,14 +160,14 @@ const navigate = useNavigate();
       <section className="relative overflow-hidden py-10" style={{ background: 'linear-gradient(180deg, #111488 0%, #0d1066 100%)' }}>
         <div className="absolute inset-0 bg-white/10"></div>
         <div className="relative max-w-6xl mx-auto px-4 md:px-8 text-center">
-         <h1 className="text-4xl  font-semibold mb-10 text-white leading-tight animate-fade-in-up">
+         <h1 className="font-inter font-bold text-[30px] md:text-[34.3px] leading-[45px]  tracking-normal  mb-10 text-white animate-fade-in-up">
             Our Culture Code
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
 <div className="group space-y-4 p-6 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-500 ease-out transform hover:-translate-y-2">
   
   <FaUsers
-    className="text-6xl text-pink-300 mx-auto
+    className="text-6xl text-[#F16D34] mx-auto
                transition-all duration-500 ease-out
                group-hover:scale-110
                group-hover:-translate-y-1
@@ -182,7 +190,7 @@ const navigate = useNavigate();
 <div className="group space-y-4 p-6 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-1000 ease-out transform hover:-translate-y-2">
   
   <FaBrain
-    className="text-6xl text-pink-300 mx-auto
+    className="text-6xl text-[#F16D34] mx-auto
                transition-all duration-500 ease-out
                group-hover:scale-110
                group-hover:-translate-y-1
@@ -205,7 +213,7 @@ const navigate = useNavigate();
 <div className="group space-y-4 p-6 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-500 ease-out transform hover:-translate-y-2">
   
   <FaChartLine
-    className="text-6xl text-pink-300 mx-auto
+    className="text-6xl text-[#F16D34] mx-auto
                transition-all duration-500 ease-out
                group-hover:scale-110
                group-hover:-translate-y-1
@@ -234,7 +242,7 @@ const navigate = useNavigate();
       {/* Why You’ll Love It Here */}
       <section className="py-13 bg-blue-900/10">
         <div className="max-w-7xl mx-auto px-6">
-           <h1 className="text-4xl font-semibold mb-15 text-gray-900 leading-tight animate-fade-in-up text-center">
+           <h1 className="font-inter font-bold text-[30px] md:text-[34.3px] leading-[45px]  tracking-normal text-center mb-10 text-gray-900 animate-fade-in-up">
             Why You’ll Love It Here?
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
@@ -265,7 +273,8 @@ const navigate = useNavigate();
    {/* Open Positions - Dynamic from JSON */}
 <section ref={openPositionsRef} className="py-15 bg-gray-900 text-white">
   <div className="max-w-7xl mx-auto px-6 text-center">
-    <h1 className="text-4xl  font-semibold mb-14 text-white leading-tight animate-fade-in-up">Open Positions</h1>
+    <h1 className="font-inter font-bold text-[30px] md:text-[34.3px] leading-[45px]  tracking-normal  mb-6 text-white animate-fade-in-up">
+      Open Positions</h1>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
       {openPositions.map((position, index) => {
         const IconComponent = {
@@ -279,7 +288,7 @@ const navigate = useNavigate();
             key={index}
             className="bg-gray-800 rounded-3xl p-8 hover:bg-gray-700 transition-all duration-300 flex flex-col"
           >
-            {IconComponent && <IconComponent className="text-5xl text-pink-400 mx-auto mb-4" />}
+            {IconComponent && <IconComponent className="text-5xl text-[#F16D34] mx-auto mb-4" />}
             <h2 className="text-xl  font-medium mb-2 text-white/70 leading-tight animate-fade-in-up">
               {position.title} <span className="block text-lg text-white">({position.subtitle})</span>
             </h2>
@@ -293,7 +302,7 @@ const navigate = useNavigate();
       navigate(position.applyLink);
     }, 600); // animation duration
   }}
-  className="mt-8 inline-flex items-center justify-center px-6 py-3 bg-pink-600 text-white font-semibold rounded-full hover:bg-pink-700 transition-all duration-300 transform hover:scale-105"
+  className="mt-8 inline-flex items-center justify-center px-6 py-3 bg-[#F16D34] text-white font-semibold rounded-full hover:bg-[#F16D34]/90 transition-all duration-300 transform hover:scale-105"
 >
   Apply Now <FaRocket className="ml-2" />
 </button>
@@ -307,7 +316,7 @@ const navigate = useNavigate();
 
       {/* Final CTA */}
       <section className="py-15 text-center bg-blue-900/20">
-        <h1 className="text-4xl   font-semibold mb-4 text-gray-900  animate-fade-in-up">
+        <h1 className="font-inter font-bold text-[30px] md:text-[34.3px] leading-[45px]  tracking-normal  mb-3 text-gray-900 animate-fade-in-up">
           Think you can keep up?<br />Apply to the Future
         </h1>
         <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-5">
@@ -315,7 +324,7 @@ const navigate = useNavigate();
         </p>
         <Link
           to="/contact"
-          className="inline-flex items-center px-8 py-4 bg-pink-600 text-white font-bold text-lg rounded-full hover:bg-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg animate-pulse-slow"
+          className="inline-flex items-center px-8 py-4 bg-[#F16D34] text-white font-bold text-lg rounded-full hover:bg-[#F16D34]/90 transition-all duration-300 transform hover:scale-105 shadow-lg animate-pulse-slow"
         >
           Connect Us <FaRocket className="ml-2" />
         </Link>

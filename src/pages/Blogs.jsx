@@ -4,6 +4,7 @@ import Background from '../assets/imagesuse/Blog.jpg';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { BsEye } from 'react-icons/bs';
 import { caseStudies, toSlug } from '../Data/Blog';
+import SEO from '../components/seo/Seo';
 
 const Blog = () => {
   const services = ['All', ...new Set(caseStudies.map((s) => s.service))];
@@ -38,9 +39,18 @@ const Blog = () => {
   return (
     <>
  
+
+          <SEO
+       title="Stravix Media Blog | Digital Marketing Insights & Case Studies"
+        description="Explore our blog for the latest digital marketing insights, case studies, and industry trends."
+         keywords="digital marketing blog, case studies, marketing insights"
+         canonicalUrl="https://Stravix.media/blog"
+         ogImage={Background}
+  author="Stravix Media"
+          />
       {/* Hero Header */}
       <header
-        className="relative text-center py-20 md:py-32 px-4 md:px-8 bg-cover bg-no-repeat bg-center overflow-hidden"
+        className="relative text-center py-20 md:py-32 px-4 md:px-8 bg-cover bg-no-repeat bg-center overflow-hidden bg-black"
         style={{ backgroundImage: `url(${Background})` ,
         loading: "lazy"
       }}
@@ -51,7 +61,7 @@ const Blog = () => {
             Delivering measurable results<br />with creative digital solutions.
           </h1>
           <p className="text-xl  text-white/80 mb-8 max-w-4xl mx-auto animate-fade-in-up animation-delay-300">
-            Elevate your brand with Zentrix - where creativity meets strategy for unparalleled digital success.
+            Elevate your brand with Stravix - where creativity meets strategy for unparalleled digital success.
           </p>
         </div>
       </header>
@@ -67,8 +77,8 @@ const Blog = () => {
                   onClick={() => setActiveTab(service)}
                   className={`px-6 py-3 font-medium text-md md:text-lg transition-all duration-300 flex-shrink-0 text-lg md:text-xl mb-2 text-gray-800 leading-tight animate-fade-in-up${
                     activeTab === service
-                      ? 'border-b-2 border-pink-600 text-pink-600'
-                      : 'text-gray-600 hover:text-pink-600 hover:border-b-2 hover:border-pink-600'
+                      ? 'border-b-2 border-[#F16D34] text-[#F16D34]'
+                      : 'text-gray-600 hover:text-[#F16D34] hover:border-b-2 hover:border-[#F16D34]'
                   }`}
                 >
                   {service}

@@ -42,7 +42,7 @@ const SubscribePopup = ({ isOpen, onClose }) => {
           />
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-pink-500 to-indigo-500 text-white py-3 rounded-lg shadow-md hover:opacity-90 transition-all"
+            className="w-full bg-[#F16D34]  text-white py-3 rounded-full shadow-md hover:opacity-90 transition-all"
           >
             Subscribe Now
           </button>

@@ -29,7 +29,7 @@ export   const AboutData = {
     ],
 team: [
       {
-        exp: "Zentrix transformed our online presence completely. Our ROI increased by 300% within the first quarter!",
+        exp: "Stravix transformed our online presence completely. Our ROI increased by 300% within the first quarter!",
         name: "Sarah Johnson",
         designation: "CEO & Founder",
         image: "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1JvWhC.img?w=1400&h=700&m=4&q=79",

@@ -4,10 +4,10 @@ export const navItems = [
     name: 'Service',
     path: '/service',
     subItems: [
-      { name: 'Content & Social Media', path: '/service/social' },
-      { name: 'SEO Marketing', path: '/service/seo' },
+      { name: 'Branding Page', path: '/service/branding' },
+      { name: 'Creative Page', path: '/service/creative' },
          { name: 'PR (Public Relations)', path: '/service/pr' },
-      { name: 'Performance Marketing', path: '/service/performance-marketing' },
+      { name: 'Social Media', path: '/service/socialmedia' },
    
     ],
   },

@@ -3,7 +3,7 @@ import { Fa6, FaLocationDot } from 'react-icons/fa6';
 
 export const footerData = {
   company: {
-    name: 'Zentrix',
+    name: 'Stravix',
     description: 'Leading digital marketing agency providing comprehensive solutions for modern businesses. We help brands grow through innovative digital strategies.',
     socialLinks: [
       { href: '#', icon: FaFacebook , label: 'Facebook' },
@@ -12,10 +12,10 @@ export const footerData = {
     ],
   },
   services: [
-    { to: '/service/social', label: 'Content and social' },
-    { to: '/service/seo', label: 'SEO Marketing' },
+    { to: '/service/branding', label: 'Branding' },
+    { to: '/service/creative', label: 'Creative' },
      { to: '/service/pr', label: 'PR' },
-    { to: '/service/performance-marketing', label: 'Performance Marketing' },
+    { to: '/service/socialmedia', label: 'Social Media' },
    
   ],
   companyLinks: [
@@ -23,8 +23,8 @@ export const footerData = {
     { to: '/contact', label: 'Contact' },
   ],
   contactInfo: [
-    { icon: FaLocationDot , text: 'Mumbai, IN' },
-    { icon: FaMailBulk, text: 'hello@zentrix.media' },
+    { icon: FaLocationDot , text: 'Dubai,UAE' },
+    { icon: FaMailBulk, text: 'marketing@stravix.media' },
   ],
   footerLinks: [
 

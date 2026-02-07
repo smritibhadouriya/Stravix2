@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { navItems } from '../Data/NavbarItems';
-import logo from '../assets/logo.png'; // Replace with your actual logo image path
+import logo from '../assets/logostravix.png'; // Replace with your actual logo image path
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -11,7 +11,6 @@ const Navbar = () => {
   const desktopServiceDropdownRef = useRef(null);
   const mobileServiceDropdownRef = useRef(null);
   const authDropdownRef = useRef(null);
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     setIsServicesOpen(false);
@@ -92,21 +91,21 @@ const Navbar = () => {
   return (
     <>
       {/* Top Bar */}
-      <div className="fixed w-full top-0 z-40 bg-gray-800 text-sm text-gray-600 py-2 md:px-6 lg:px-10">
+      <div className="fixed w-full top-0 z-40 bg-[#2D2D2D] text-sm text-gray-600 py-2 md:px-6 lg:px-10">
         <div className="max-w-7xl mx-auto px-4 md:px-0 lg:px-6 flex justify-between items-center text-md">
           <div className="text-white hidden sm:block ">
-            India&apos;s Leading 360° Digital Marketing Agency
+            Leading 360° Digital Marketing Agency
           </div>
           <div className="flex space-x-6 items-center">
-            <a href="mailto:info@zentrix.com" className="text-white">
-              hello@zentrix.media
-            </a>
+            <Link to="mailto:marketing@stravix.media" className="text-white">
+              marketing@stravix.media
+            </Link>
           </div>
         </div>
       </div>
 
       <nav className="fixed w-full md:px-6  z-50 bg-gray-100 top-8">
-        <div className="max-w-7xl mx-auto px-4 md:px-0 lg:px-6 ">
+        <div className="max-w-7xl mx-auto px-4 md:px-0 ">
           <div className="flex justify-between items-center h-16">
             <div className="flex-shrink-0">
               <div
@@ -115,8 +114,8 @@ const Navbar = () => {
               >
                 <img
                   src= {logo}// Replace with your actual logo image path (e.g., import logo from '../assets/logo.png' and use src={logo})
-                  alt="Zentrix Logo"
-                  className="h-20 w-auto" // Adjust height as needed to match the original text size
+                  alt="Stravix Logo"
+                  className="h-40 w-auto" // Adjust height as needed to match the original text size
                 />
               </div>
             </div>
@@ -135,14 +134,14 @@ const Navbar = () => {
                         onClick={toggleServicesDropdown}
                         className={`${
                           isNavItemActive(item)
-                            ? 'text-[#111488]  text-lg border-b-2 border-[#EF4B93]'
-                            : 'text-[#111488]  text-lg'
-                        } hover:text-[#EF4B93] px-4 py-1 transition-all duration-300 flex items-center group`}
+                            ? 'text-[#2D2D2D]  text-lg border-b-2 border-[#F16D34]'
+                            : 'text-[#2D2D2D]  text-lg'
+                        } hover:text-[#F16D34] px-4 py-1 transition-all duration-300 flex items-center group`}
                       >
                         {item.name}
                         
                         <svg
-                          className={`w-5 h-5 ml-2 transform ${isServicesOpen ? 'rotate-180' : ''} group-hover:text-[#EF4B93]`}
+                          className={`w-5 h-5 ml-2 transform ${isServicesOpen ? 'rotate-180' : ''} group-hover:text-[#F16D34]`}
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -152,15 +151,15 @@ const Navbar = () => {
                         </svg>
                       </button>
                       {isServicesOpen && (
-                        <div className="absolute top-full left-0 mt-3 w-56 bg-white shadow-lg rounded-lg py-3 z-50 border border-[#EF4B93]/20">
+                        <div className="absolute top-full left-0 mt-3 w-56 bg-white shadow-lg rounded-lg py-3 z-50 border border-[#F16D34]/20">
                           {item.subItems.map((subItem) => (
                             <NavLink
                               key={subItem.name}
                               to={subItem.path}
                               className={({ isActive }) =>
                                 `${
-                                  isActive ? 'text-[#EF4B93] ' : 'text-[#111488] '
-                                } block px-4 py-2 text-lg hover:text-[#EF4B93] hover:bg-gray-100 transition-all duration-300`
+                                  isActive ? 'text-[#F16D34] ' : 'text-[#2D2D2D] '
+                                } block px-4 py-2 text-lg hover:text-[#F16D34] hover:bg-gray-100 transition-all duration-300`
                               }
                               onClick={() => setIsServicesOpen(false)}
                             >
@@ -176,9 +175,9 @@ const Navbar = () => {
                       className={({ isActive }) =>
                         `${
                           isActive
-                            ? '  text-lg border-b-2 border-[#EF4B93] text-[#EF4B93]'
-                            : 'text-[#111488]  text-lg'
-                        } hover:text-[#EF4B93] px-4 py-2 transition-all duration-300`
+                            ? '  text-lg border-b-2 border-[#F16D34] text-[#F16D34]'
+                            : 'text-[#2D2D2D]  text-lg'
+                        } hover:text-[#F16D34] px-4 py-2 transition-all duration-300`
                       }
                     >
                       {item.name}
@@ -193,7 +192,7 @@ const Navbar = () => {
               {contactItem && (
                 <NavLink
                   to={contactItem.path}
-                  className={`bg-[#EF4B93] text-white px-6 py-2 rounded-full text-lg font-medium hover:bg-pink-600 transition-all duration-300 ${
+                  className={`bg-[#F16D34] text-white px-6 py-2 rounded-full text-lg font-medium hover:bg-[#F16D34]/90 transition-all duration-300 ${
                     location.pathname === contactItem.path ? 'ring-2 ring-white/50' : ''
                   }`}
                 >
@@ -206,7 +205,7 @@ const Navbar = () => {
             <div className="lg:hidden flex items-center">
               <button
                 onClick={toggleMenu}
-                className="text-[#111488] hover:text-[#EF4B93] focus:outline-none focus:ring-2 focus:ring-[#EF4B93] rounded-md p-2"
+                className="text-[#2D2D2D] hover:text-[#F16D34] focus:outline-none focus:ring-2 focus:ring-[#F16D34] rounded-md p-2"
                 aria-label="Toggle menu"
               >
                 <svg className="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -231,7 +230,7 @@ const Navbar = () => {
           <div className="flex justify-end p-5">
             <button
               onClick={toggleMenu}
-              className="text-[#111488] hover:text-[#EF4B93] focus:outline-none focus:ring-2 focus:ring-[#EF4B93] rounded-md p-2"
+              className="text-[#2D2D2D] hover:text-[#F16D34] focus:outline-none focus:ring-2 focus:ring-[#F16D34] rounded-md p-2"
               aria-label="Close menu"
             >
               <svg className="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -249,9 +248,9 @@ const Navbar = () => {
   onClick={toggleServicesDropdown}
   className={`${
     isNavItemActive(item)
-      ? 'text-[#EF4B93]'
-      : 'text-[#111488]'
-  } hover:text-[#EF4B93] transition-all duration-300 
+      ? 'text-[#F16D34]'
+      : 'text-[#2D2D2D]'
+  } hover:text-[#F16D34] transition-all duration-300 
      w-full text-left flex items-center py-3 px-4 text-lg`}
 >
 
@@ -273,8 +272,8 @@ const Navbar = () => {
                             to={subItem.path}
                             className={({ isActive }) =>
                               `${
-                                isActive ? 'text-[#EF4B93]' : 'text-[#111488]'
-                              } text-lg hover:text-[#EF4B93] transition-all duration-300 py-2 pl-4`
+                                isActive ? 'text-[#F16D34]' : 'text-[#2D2D2D]'
+                              } text-lg hover:text-[#F16D34] transition-all duration-300 py-2 pl-4`
                             }
                             onClick={() => {
                               setIsMenuOpen(false);
@@ -293,9 +292,9 @@ const Navbar = () => {
                     className={({ isActive }) =>
                       `${
                         isActive
-                          ? 'text-[#EF4B93]'
-                          : 'text-[#111488]'
-                      } hover:text-[#EF4B93] py-3 px-4 transition-all duration-300 text-lg`
+                          ? 'text-[#F16D34]'
+                          : 'text-[#2D2D2D]'
+                      } hover:text-[#F16D34] py-3 px-4 transition-all duration-300 text-lg`
                     }
                     onClick={() => {
                       setIsMenuOpen(false);
@@ -311,7 +310,7 @@ const Navbar = () => {
             {contactItem && (
               <NavLink
                 to={contactItem.path}
-                className={`bg-[#EF4B93] text-white px-6 py-3 rounded-full text-lg font-medium hover:bg-pink-600 transition-all duration-300 text-center ${
+                className={`bg-[#F16D34] text-white px-6 py-3 rounded-full text-lg font-medium hover:bg-[#F16D34]/90 transition-all duration-300 text-center ${
                   location.pathname === contactItem.path ? 'ring-2 ring-white/50' : ''
                 }`}
                 onClick={() => {

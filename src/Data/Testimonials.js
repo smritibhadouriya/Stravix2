@@ -1,6 +1,6 @@
 export const  testimonials = [
     {
-      quote: 'Zentrix transformed our online presence completely. Our ROI increased by 300% within the first quarter!',
+      quote: 'Stravix transformed our online presence completely. Our ROI increased by 300% within the first quarter!',
       name: 'Sarah Johnson',
       company: 'TechStart Inc.',
       image: 'https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1JvWhC.img?w=1400&h=700&m=4&q=79',
